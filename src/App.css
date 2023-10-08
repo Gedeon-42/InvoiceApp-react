@@ -1,0 +1,23 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#020616 ;
+  padding: 1px ;
+}
+html{
+  font-family: "Inter",sans-serif;
+}
+@media (max-width:900px) {
+  body{
+    padding: 1px 50px;
+  }
+}
+@media (max-width:500px) {
+  body{
+    padding: 1px 50px;
+  }
+}

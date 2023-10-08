@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container{
+    background-color:#020616 ;
+    padding: 5% 20%;
+    position: absolute;
+    top: 100px;
+    
+}
+.form-container> form{
+display: flex;
+flex-direction: column;
+position: relative;
+background-color: #2F2838 ;;
+padding: 20px;
+
+}
+.form-container >form input{
+    width: 400px;
+    margin: 10px;
+    border-radius: 7px;
+    padding: 13px;
+    border: 0;
+    outline: 0;
+}
+.form-container >form button{
+    width: 400px;
+    margin: 10px;
+    border-radius: 7px;
+    padding: 13px;
+    border: 0;
+    outline: 0;
+    background-color: black;
+    color: white;
+}
+.form-container >form select{
+    width: 400px;
+    margin: 10px;
+    border-radius: 7px;
+    padding: 13px;
+    border: 0;
+    outline: 0;
+    color: black;
+}
+.closeMenu{
+position: absolute;
+right: 0;
+color: white;
+font-size: 20px;
+top: 0;
+}
+.test{
+    color:white
+}
+@media (max-width:900px) {
+    .form-container{
+        background-color:#020616 ;
+        padding: 5% 5%;
+        position: absolute;
+        top: 80px; 
+        margin-right: 200px;
+        
+    }
+    .form-container >form input{
+        width: 300px;
+        margin: 10px;
+        border-radius: 7px;
+        padding: 13px;
+        border: 0;
+        outline: 0;
+    }
+    .form-container >form button{
+        width: 300px;
+        margin: 10px;
+        border-radius: 7px;
+        padding: 10px;
+        border: 0;
+        outline: 0;
+        background-color: black;
+        color: white;
+    }
+    .form-container >form select{
+        width: 300px;
+        margin: 10px;
+        border-radius: 7px;
+        padding: 10px;
+        border: 0;
+        outline: 0;
+        color: black;
+    }
+  }
