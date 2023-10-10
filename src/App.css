@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color:#020616 ;
+  background-color:#141625;;
   padding: 1px ;
 }
 html{
@@ -13,11 +13,11 @@ html{
 }
 @media (max-width:900px) {
   body{
-    padding: 1px 50px;
+    padding: 1px 20px;
   }
 }
 @media (max-width:500px) {
   body{
-    padding: 1px 50px;
+    padding: 1px 20px;
   }
 }

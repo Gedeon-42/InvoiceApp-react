@@ -5,91 +5,105 @@
 }
 
 .form-container{
-    background-color:#020616 ;
-    padding: 5% 20%;
+    background-color:#1E2139;;
+    width: 50%;
     position: absolute;
-    top: 100px;
-    
-}
-.form-container> form{
-display: flex;
-flex-direction: column;
-position: relative;
-background-color: #2F2838 ;;
-padding: 20px;
+    top: 0;
+    left: 6%;
+    padding: 20px 50px;
+    border-top-right-radius: 7px;
 
 }
-.form-container >form input{
-    width: 400px;
-    margin: 10px;
-    border-radius: 7px;
-    padding: 13px;
-    border: 0;
-    outline: 0;
+.form-container form{
+    display: flex;
+    flex-direction: column;
 }
-.form-container >form button{
-    width: 400px;
-    margin: 10px;
-    border-radius: 7px;
-    padding: 13px;
+.form-container form label{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 7px;
+    text-transform: capitalize;
+}
+.larger-input{
+    width:100%;
+    padding: 14px;
+    background-color:#252945;
     border: 0;
     outline: 0;
-    background-color: black;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.location-input{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.location-input .location1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.location-input .location1 input{
+    padding: 14px;
+    width: 150px;
+    background-color: #252945;
+    border: 0;
+    outline: 0;
     color: white;
 }
-.form-container >form select{
-    width: 400px;
-    margin: 10px;
-    border-radius: 7px;
-    padding: 13px;
-    border: 0;
+.bill-from{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.bill-to{
+    display: flex;
+    flex-direction: column;
+}
+.form-footer-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-discard{
+    background-color: white;
+    color: gray;
+    padding: 20px;
+    border-radius:30px;
     outline: 0;
-    color: black;
+    border: 0;
 }
-.closeMenu{
-position: absolute;
-right: 0;
-color: white;
-font-size: 20px;
-top: 0;
+.send-save-button{
+    display: flex;
+    gap: 20px;
 }
-.test{
-    color:white
+.save-btn{
+    background-color: #252945;;
+    color: gray;
+    padding: 20px;
+    border-radius:25px;
+    outline: 0;
+    border: 0; 
 }
-@media (max-width:900px) {
-    .form-container{
-        background-color:#020616 ;
-        padding: 5% 5%;
-        position: absolute;
-        top: 80px; 
-        margin-right: 200px;
-        
-    }
-    .form-container >form input{
-        width: 300px;
-        margin: 10px;
-        border-radius: 7px;
-        padding: 13px;
-        border: 0;
-        outline: 0;
-    }
-    .form-container >form button{
-        width: 300px;
-        margin: 10px;
-        border-radius: 7px;
-        padding: 10px;
-        border: 0;
-        outline: 0;
-        background-color: black;
-        color: white;
-    }
-    .form-container >form select{
-        width: 300px;
-        margin: 10px;
-        border-radius: 7px;
-        padding: 10px;
-        border: 0;
-        outline: 0;
-        color: black;
-    }
-  }
+.send-btn{
+    background-color: blueviolet;
+    opacity: 1;
+    color: gray;
+    padding: 15px;
+    border-radius:25px;
+    outline: 0;
+    border: 0; 
+}
+.bill{
+    color: #6e28c3;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 7px;
+    opacity: 5;
+    text-transform: capitalize;
+
+}

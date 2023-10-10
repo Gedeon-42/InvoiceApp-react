@@ -1,18 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import './App.css'
 import Invoice from './components/Invoice/Invoice'
+import SingleInvoice from './components/Invoice/SingleInvoice'
+import { useStateContext } from './context/ContextProvide'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
+   <BrowserRouter>
       <div className='main'>
-        
-        <Invoice/>
+  
+   <Routes>
+    <Route path='/' element={<Invoice/>}/>
+    <Route path='invoice/:id' element={<SingleInvoice />}/>
+   </Routes>
       </div>
+      </BrowserRouter>
     </>
   )
 }
