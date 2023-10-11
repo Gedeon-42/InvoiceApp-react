@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './invoice.css'
 import { Link, useParams } from 'react-router-dom'
 import { useStateContext } from '../../context/ContextProvide'
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaAngleLeft, FaArrowLeft } from 'react-icons/fa'
 import Sidebar from './Sidebar'
 function SingleInvoice() {
 
@@ -22,11 +22,11 @@ function SingleInvoice() {
   },[id]);
 
   console.log(invoiceDetails)
-  const { address,address2,postcode, email,name,select } = invoiceDetails;
+  const { address,address2,postcode, country, email,name, city,select,city1 } = invoiceDetails;
   return (
     <div className='single-wrapper'>
       <Sidebar/>
-      <Link to='/' className='back-link'> <FaArrowLeft/>Go back</Link>
+      <Link to='/' className='back-link'> <FaAngleLeft/>Go back</Link>
       <div className='singleinvoice-header'>
     <div className='single-status'>
         <p >status</p><button className='btn-status' style={{backgroundColor:select==='paid'?'mediumseagreen':'orange'}}> {select}</button>
@@ -43,42 +43,44 @@ function SingleInvoice() {
 <div className='single-invoice-container'>
   <div className='single-body-header'>
     <div className='header1'>
-    <h2>{postcode}</h2>
-<p>re-brancing</p>
+    <h2 className='info-header'>{postcode}</h2>
+<p className='info-text'>re-brancing</p>
 
     </div>
 <div className='header2'>
-<p>
-  sharrington
+<p className='info-text'>
+  {address}
 </p>
-<p>
-united states
+<p className='info-text'>
+{city}
 </p>
-<p>zoo06678</p>
+<p className='info-text'>{country}</p>
 </div>
-  </div>   
+  </div>  
+   {/*single invoice body body  */}
   <div className='single-body-body'>
     <div className="date">
       <div className='date1'>
-      <p>invoice date</p>
-      <h2>22-8-2023</h2>
+      <p className='info-text'>Invoice Date</p>
+      <h2 className='info-header'>22-8-2023</h2>
       </div>
       
       <div className='date2'>
-      <p>invoice date</p>
-      <h2>22-8-2023</h2>
+      <p className='info-text'>Payment Due</p>
+      <h2 className='info-header'>22-8-2023</h2>
       </div>
       
     </div>
-    <div className="billto">
-      <p>{address2}</p>
-      <h2>jensen hung</h2>
-      <p>1p union berlin</p>
-      <p>london</p>
+    <div className="billto date1">
+      <p className='info-text'>Bill To</p>
+      <h2 className='info-header'>jensen hung</h2>
+      <p className='info-text'>{address2}</p>
+      <p className='info-text'>{city1}</p>
+      <p className='info-text'>{country}</p>
     </div>
-    <div className="sentto">
-      <p>sent to</p>
-      <h2>{email}</h2>
+    <div className="sentto date1">
+      <p className='info-text'>Sent to</p>
+      <p className='info-header'>{email}</p>
   
     </div>
   </div>
@@ -102,7 +104,7 @@ united states
     <tr className='table-total'>
       <td colSpan={3}>price</td>
       
-      <td>567</td>
+      <td className='total'><h1>$567</h1></td>
     </tr>
       </tbody>
     </table>

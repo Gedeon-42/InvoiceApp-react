@@ -49,9 +49,8 @@ height: 70px;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 10px 200px;
-    margin-left: 100px;
-
+    padding: 10px 150px;
+    margin-left: 80px;
 }
 
 .invoice-title{
@@ -68,8 +67,8 @@ font-size: 14px;
 margin-top: 5px;
 }
 .invoice-container{
-    margin-left: 100px;
-    padding: 10px 200px;
+    margin-left: 80px;
+    padding: 10px 150px;
 }
 .invoice-content{
     display: flex;
@@ -108,7 +107,7 @@ margin-top: 5px;
     background-color:#252945;;
     justify-content: space-between;
     padding: 30px 20px;
-    transition: 0.5s;
+    transition: 1s;
     text-decoration: none;
 }
 .invoice-content1:hover{
@@ -142,12 +141,7 @@ margin-top: 5px;
 .button-name p{
 color: white;
 }
-.back-link{
-    color: white;
-    display: flex;
-    gap: 10px;
-    margin-left: 200px;
-}
+
 /* mobile design */
 @media (max-width:900px) {
     .invoice-section{
@@ -251,10 +245,23 @@ top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 100px;
-    margin:  90px 200px 10px 200px;
-    background-color: #252945
-
+    padding: 30px 20px;
+    margin:  40px 250px 10px 250px;
+    background-color: #252945;
+    border-radius: 7px;
+}
+.back-link{
+    color: lightgray;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 200px;
+    text-decoration: none;
+}
+.single-status{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 .single-status p{
     color: white;
@@ -262,94 +269,101 @@ top: 10px;
 .btn-edit{
     background: white;
     color: gray;
-    padding:  7px 13px;
-    border-radius: 14px;
+    padding:  15px 13px;
+    border-radius: 25px;
     border: 0;
     outline: 0;
+    text-transform: capitalize;
+    font-size: 16px;
+    width: 70px;
 }
 .btn-delete{
     background:crimson;
     color: white;
-    padding:  7px 13px;
-    border-radius: 17px;
+    padding:  15px 13px;
+    border-radius: 25px;
     border: 0;
     outline: 0;
     margin-left: 20px;
+    font-size: 16px;
+    width: 80px;
 }
 .btn-mark{
-    background: violet;
-    color: white;
-    padding:  7px 13px;
+    background: #7c5dfa;
+    color: #fff;
+    padding:  15px 13px;
     margin-left: 20px;
-    border-radius: 14px;
+    border-radius: 25px;
     border: 0;
     outline: 0;
+    width: 110px;
 }
 .single-invoice-container{
-    
-    padding: 10px 100px;
-    margin:  1px 200px;
+    padding: 30px 20px;
+    margin:  1px 250px;
     background-color:  #252945;
     margin-top: 20px;
+    border-radius: 7px;
 }
 .single-body-header{
 display: flex;
 align-items: center;
 justify-content: space-between;
 width: 100%;
+margin-bottom: 30px;
+
 }
 .header1{
     display: flex;
     flex-direction: column;
     color: white;
+    gap: 10px;
+}
+.info-header{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.info-text{
+    color: #DFE3FA;
+    font-size: 15px;
+    line-height: 15px;
 }
 .header2{
     display: flex;
     flex-direction: column;
     color: white;
+    gap: 7px;
 }
+
 .single-body-body{
     display: flex;
     width: 100%;
-    
+     
+    gap: 30px;
 }
 .date{
-margin: 20px;
+display: flex;
 flex-basis: 25%;
+flex-direction: column;
+gap: 40px;
 }
-.date p{
-    color: lightgray;
+.date1,.date2{
+display: flex;
+flex-direction: column;
+gap: 10px;
 }
-.date h2{
-    color: white;
-    font-size: 15px;
-}
-.date2{
-    margin-top: 20px;
-}
+
 .billto{
-    
+
     flex-basis: 30%;
-}
-.billto p{
-    color: lightgray;
-}
-.billto h2{
-    color: white;
-    font-size: 15px;
 }
 .sentto{
     flex-basis: 30%;
 }
-.sentto p{
-    color: lightgray;
-}
-.sentto h2{
-    color: white;
-    font-size: 13px;
-}
 .single-table{
     width: 100%;
+    margin-top: 30px;
 }
 .single-table table{
     width: 100%;
@@ -364,6 +378,9 @@ flex-basis: 25%;
   .table-total{
     background: black;
     color: white;
+  }
+  .total h1{
+    font-size: 22px;
   }
   @media(max-width:900px){
     /* responsivensess for single invoice */
