@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import './invoice.css'
 import { Link, useParams } from 'react-router-dom'
-import  {invoices} from '../data/data'
 import { useStateContext } from '../../context/ContextProvide'
 import { FaArrowLeft } from 'react-icons/fa'
+import Sidebar from './Sidebar'
 function SingleInvoice() {
 
   
@@ -22,17 +22,14 @@ function SingleInvoice() {
   },[id]);
 
   console.log(invoiceDetails)
-  const { code,amount,name,status } = invoiceDetails;
+  const { address,address2,postcode, email,name,select } = invoiceDetails;
   return (
     <div className='single-wrapper'>
-      <h1 className='test'>{name}</h1>
-      <h1 className='test'>{amount}</h1>
-      <h1 className='test'>{code}</h1>
-      <h1 className='test'>{status}</h1>
-      <Link> <FaArrowLeft/>Go back</Link>
+      <Sidebar/>
+      <Link to='/' className='back-link'> <FaArrowLeft/>Go back</Link>
       <div className='singleinvoice-header'>
     <div className='single-status'>
-        <p >status</p><button className='btn-status'> paid</button>
+        <p >status</p><button className='btn-status' style={{backgroundColor:select==='paid'?'mediumseagreen':'orange'}}> {select}</button>
     </div>
     <div className='status-edit-btn'>
 <button className='btn-edit'>edit</button>
@@ -46,7 +43,7 @@ function SingleInvoice() {
 <div className='single-invoice-container'>
   <div className='single-body-header'>
     <div className='header1'>
-    <h2>RT50008</h2>
+    <h2>{postcode}</h2>
 <p>re-brancing</p>
 
     </div>
@@ -74,14 +71,14 @@ united states
       
     </div>
     <div className="billto">
-      <p>bill to</p>
+      <p>{address2}</p>
       <h2>jensen hung</h2>
       <p>1p union berlin</p>
       <p>london</p>
     </div>
     <div className="sentto">
       <p>sent to</p>
-      <h2>jeson@gmail.com</h2>
+      <h2>{email}</h2>
   
     </div>
   </div>

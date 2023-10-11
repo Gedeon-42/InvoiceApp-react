@@ -8,7 +8,7 @@
 
 }
 .sidebar{
-    width: 80px;
+    width: 100px;
     background-color:#252945;;
     height: 100vh;
     position: fixed;
@@ -20,12 +20,13 @@
     border-bottom-right-radius: 12px;
     border-top-right-radius: 17px;
 }
-.sidebar-header img{
-width: 80px;
+.sidebar-img{
+    width: 100px;
 }
 .sun-btn{
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 .sun-logo{
     color:lightgray;
@@ -34,13 +35,14 @@ width: 80px;
     margin-bottom: 20px;
 }
 .profile-btn{
-    border-top: 1px solid white;
     width: 80px;
+    padding: 10px;
+    width: 100%;
 }
 .profile-btn img{
-    height: 50px;
-    border-radius: 50%;
-    margin-left:1px;
+border-radius: 50%;
+width: 70px;
+height: 70px;
 }
 .invoice-header{
     display: flex;
@@ -51,9 +53,7 @@ width: 80px;
     margin-left: 100px;
 
 }
-.sidebar-header img{
-    width: 80px;
-    }
+
 .invoice-title{
     display: flex;
     flex-direction: column;
@@ -142,6 +142,12 @@ margin-top: 5px;
 .button-name p{
 color: white;
 }
+.back-link{
+    color: white;
+    display: flex;
+    gap: 10px;
+    margin-left: 200px;
+}
 /* mobile design */
 @media (max-width:900px) {
     .invoice-section{
@@ -201,6 +207,7 @@ color: white;
     .invoice-container{
         margin-left: 20px;
         padding: 10px 20px;
+        
     }
 
     .invoice-content1{
@@ -245,8 +252,8 @@ top: 10px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 100px;
-    margin:  1px 200px;
-    background-color: #2F2838;
+    margin:  90px 200px 10px 200px;
+    background-color: #252945
 
 }
 .single-status p{
@@ -282,7 +289,7 @@ top: 10px;
     
     padding: 10px 100px;
     margin:  1px 200px;
-    background-color: #2F2838;
+    background-color:  #252945;
     margin-top: 20px;
 }
 .single-body-header{

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './invoice.css'
 import {FaAngleDown, FaAngleRight,  FaArrowLeft,  FaPlusCircle, FaSun} from 'react-icons/fa'
 import Form from '../form/Form'
-import invoicee from '../../assets/images/invoice.jpg'
-import profile from '../../assets/images/profile.jpg'
+
 import '../form/Form.css'
 import { FaTimes } from 'react-icons/fa'
 import { Link, useParams } from 'react-router-dom'
 import { useStateContext } from '../../context/ContextProvide'
+import Sidebar from './Sidebar'
 
 function Invoice() {
 
@@ -87,18 +87,7 @@ setModal(false)
     <>
   
     <section className='invoice-section'>
-      <div className='sidebar'>
-        <div className='sidebar-header'>
-          <img src={invoicee} alt="" />
-          <div className='sun-btn'>
-              <FaSun className='sun-logo'/>
-<div className='profile-btn'>
-<img src={profile}/>
-</div>
-          </div>
-
-        </div>
-      </div>
+     <Sidebar/>
    <div className='invoice-header'>
       <div className='invoice-title'>
         <h2>invoices</h2>
@@ -186,7 +175,7 @@ setModal(false)
         <label htmlFor="date">invoice date</label>
 <input type="date" name='date' onChange={(e)=>{setDate(e.target.value)}} className='larger-input'/>
 <label htmlFor="payment">payment status</label>
-<select name='select' className='larger-input'>
+<select name='select' onChange={(e)=>setSelect(e.target.value)} className='larger-input'>
   <option value="pending">pending</option>
   <option value="paid">paid</option>
   <option value="draft">draft</option>
@@ -198,7 +187,7 @@ setModal(false)
       <div className="item-list">
       </div>
       <div className="form-footer-button">
-      <button className='btn-discard'>discard</button>
+      <button type='button' onClick={openModel} className='btn-discard'>discard</button>
       <div className="send-save-button">
 <button className='save-btn'>save as draft</button>
 <button className='send-btn'>save and send</button>
